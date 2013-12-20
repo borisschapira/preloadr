@@ -1,4 +1,16 @@
+/**
+ * Preload a collection of images (license : GPL v2)
+ * @author Boris Schapira
+ *
+ * @param {(object|string[])} srcCollection - A collection of images
+ * @param {function(object)=} callbackOne - A function callback that is called after each loading
+ * @param {function((object|object[]))=} callbackAll - A function callback that is called after all the loading
+ * @param {boolean} [sequential=false] - A boolean defining wheter to force the sequential loading. Default : false.
+ *
+ */
 function preloadr(srcCollection, callbackOne, callbackAll, sequential) {
+    sequential = typeof sequential !== 'undefined' ? sequential : false;
+
     var imgCollection = srcCollection instanceof Array ? [] : {};
     var srcIndexArray = [];
     for (var key in srcCollection) {
