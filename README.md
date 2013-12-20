@@ -1,8 +1,10 @@
 preloadr.js
 ================
 
-Helper for images preloading, with the ability to callback after each
-load and at the end
+Helper for images preloading, with :
+ * optional callback after each load
+ * optional callback at the end
+ * possibility to force sequential loading of images
 
 Usage
 -----
@@ -14,9 +16,9 @@ Usage
 
 You can call it with an array or object of images.
 
- * The optionnal second parameter is the function that will be called after the loading of all images.
- * The optionnal third parameter is the function that will be called after each image is loaded.
- * The optionnal last parameter defines whether you want to force a sequential loading (each image is loaded after
+ * The optional second parameter is the function that will be called after the loading of all images.
+ * The optional third parameter is the function that will be called after each image is loaded.
+ * The optional last parameter defines whether you want to force a sequential loading (each image is loaded after
 the previous one has finished - note that 'finished' does not mean loaded, the image loading could have been aborted or unsuccesful -). Useful if you want to minimize bandwith consumtion. Default value : false.
 
 ``` js
