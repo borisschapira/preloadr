@@ -61,4 +61,4 @@ There is no retry after an error in image loading.
 License
 -------
 
-GPLv2 License (see LICENSE file)
+The MIT License (see LICENSE file)
