@@ -62,6 +62,7 @@ function preloadr(srcCollection, callbackOne, callbackAll, sequential) {
         }
         if (sequential) {
             imgCollection[srcIndexArray[0]].src = srcCollection[srcIndexArray[0]];
+			imgCollection[srcIndexArray[i]].props = srcCollection[srcIndexArray[i]].props;
         }
     }
 }
