@@ -56,7 +56,8 @@ function preloadr(srcCollection, callbackOne, callbackAll, sequential) {
             imgCollection[srcIndexArray[i]].onload = imgCollection[srcIndexArray[i]].onerror = imgCollection[srcIndexArray[i]].onabort = onEvent(i);
 
             if (!sequential) {
-                imgCollection[srcIndexArray[i]].src = srcCollection[srcIndexArray[i]];
+                imgCollection[srcIndexArray[i]].src = srcCollection[srcIndexArray[i]].src;
+                imgCollection[srcIndexArray[i]].props = srcCollection[srcIndexArray[i]].props;
             }
         }
         if (sequential) {
