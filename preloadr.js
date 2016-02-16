@@ -24,7 +24,8 @@ function preloadr(srcCollection, callbackOne, callbackAll, sequential) {
                         if (sequential && index < srcIndexArray.length - 1) {
                             return function () {
                                 var newIndex = srcIndexArray[index + 1];
-                                imgCollection[newIndex].src = srcCollection[newIndex];
+                                imgCollection[newIndex].src = srcCollection[newIndex].src;
+                                imgCollection[newIndex].props = srcCollection[newIndex].props;
                             };
                         } else {
                             return null;
@@ -61,8 +62,8 @@ function preloadr(srcCollection, callbackOne, callbackAll, sequential) {
             }
         }
         if (sequential) {
-            imgCollection[srcIndexArray[0]].src = srcCollection[srcIndexArray[0]];
-			imgCollection[srcIndexArray[i]].props = srcCollection[srcIndexArray[i]].props;
+            imgCollection[srcIndexArray[0]].src = srcCollection[srcIndexArray[0]].src;
+			imgCollection[srcIndexArray[0]].props = srcCollection[srcIndexArray[0]].props;
         }
     }
 }

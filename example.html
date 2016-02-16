@@ -3,26 +3,26 @@
 <head>
 	<meta charset="utf-8">
 	<title>preloadr.js Example</title>
-	<script src="./preloadr.min.js"></script>
+	<script src="./preloadr.js"></script>
 	<script type="text/javascript">
 
 		console && console.log('First, an asynchronous loading with no log at all.');
 		preloadr([
-			'http://dummyimage.com/600x600/000/fff.jpg&text=img1',
-			'http://dummyimage.com/600x600/000/fff.jpg&text=img2',
-			'http://dummyimage.com/600x600/000/fff.jpg&text=img3',
-			'http://dummyimage.com/600x600/000/fff.jpg&text=img4',
-			'http://dummyimage.com/600x600/000/fff.jpg&text=img5',
-			'http://dummyimage.com/600x600/000/fff.jpg&text=img6'
+			{ src: 'http://dummyimage.com/600x600/000/fff.jpg&text=img1' },
+			{ src: 'http://dummyimage.com/600x600/000/fff.jpg&text=img2' },
+			{ src: 'http://dummyimage.com/600x600/000/fff.jpg&text=img3' },
+			{ src: 'http://dummyimage.com/600x600/000/fff.jpg&text=img4'},
+			{ src: 'http://dummyimage.com/600x600/000/fff.jpg&text=img5' },
+			{ src: 'http://dummyimage.com/600x600/000/fff.jpg&text=img6' }
 			], null , function(){
 				console && console.log('Then, a synchronous loading with logs after each image and at the end.');
 				preloadr({
-					img1: 'http://dummyimage.com/600x600/fff/000.jpg&text=img1',
-					img2: 'http://dummyimage.com/600x600/fff/000.jpg&text=img2',
-					img3: 'http://dummyimage.com/600x600/fff/000.jpg&text=img3',
-					img4: 'http://dummyimage.com/600x600/fff/000.jpg&text=img4',
-					img5: 'http://dummyimage.com/600x600/fff/000.jpg&text=img5',
-					img6: 'http://dummyimage.com/600x600/fff/000.jpg&text=img6'
+					img1: { src: 'http://dummyimage.com/600x600/fff/000.jpg&text=img1' },
+					img2: { src: 'http://dummyimage.com/600x600/fff/000.jpg&text=img2' },
+					img3: { src: 'http://dummyimage.com/600x600/fff/000.jpg&text=img3' },
+					img4: { src: 'http://dummyimage.com/600x600/fff/000.jpg&text=img4' },
+					img5: { src: 'http://dummyimage.com/600x600/fff/000.jpg&text=img5' },
+					img6: { src: 'http://dummyimage.com/600x600/fff/000.jpg&text=img6' }
 				}, function (img) {
 					console && console.log(img.src)
 				}, function (imgs) {
@@ -30,7 +30,7 @@
 				}, true)
 			}, false);
 
-		
+
 	</script>
 </head>
 <body>
