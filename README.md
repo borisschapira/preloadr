@@ -21,14 +21,14 @@ You can call it with an array or object of images.
  * The optional last parameter defines whether you want to force a sequential loading (each image is loaded after
 the previous one has finished - note that 'finished' does not mean loaded, the image loading could have been aborted or unsuccesful -). Useful if you want to minimize bandwith consumtion. Default value : false.
 
-``` js
+```js
 preloadr(['img1.png', 'img2.png'],
     function (images) {
-        console.log('I've loaded ' + images.length + ' images !');
+        console.log("I've loaded " + images.length + " images !");
         // => "I've loaded 2 images"
     },
     function (images) {
-        console.log('I've juste loaded : ' + image.src);
+        console.log("I've juste loaded : " + image.src);
         // => "I've just loaded img1.png"
         // => "I've just loaded img2.png"
     },
@@ -38,7 +38,7 @@ preloadr(['img1.png', 'img2.png'],
 
 or
 
-``` js
+```js
 preloadr({ img1: 'img1.png', img2: 'img2.png' },
     function (image) {
         console.log(image);
